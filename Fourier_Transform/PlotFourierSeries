@@ -19,3 +19,5 @@ F1=F[1];
 F5=F[5];
 F10=F[10];
 Plot[{f[x],F1,F5,F10},{x,\[Pi],-\[Pi]},PlotStyle->{{Purple, Thick},{Yellow,Thick},{Green,Thick},{Orange,Thick}}]
+
+![](images/Fourier.jpg)
