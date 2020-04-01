@@ -1,0 +1,29 @@
+Plot the original function f(x) and Fourier Series up to n=1,5,10 in a same graph.
+
+Clear["Global`*"]
+<math xmlns='http://www.w3.org/1998/Math/MathML'
+    mathematica:form='StandardForm'
+    xmlns:mathematica='http://www.wolfram.com/XML/'>
+ <mrow>
+  <mrow>
+   <mi>x0</mi>
+   <mo>=</mo>
+   <mrow>
+    <mo>-</mo>
+    <mi>&#960;</mi>
+   </mrow>
+  </mrow>
+  <mo>;</mo>
+  <mtext> </mtext>
+  <mrow>
+   <mi>L</mi>
+   <mo>=</mo>
+   <mrow>
+    <mn>2</mn>
+    <mo>&#8290;</mo>
+    <mi>&#960;</mi>
+   </mrow>
+  </mrow>
+  <mo>;</mo>
+ </mrow>
+</math>
