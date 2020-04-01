@@ -18,6 +18,7 @@
   </mrow>
   <mo>&#8290;</mo>
   <mtext>&#62371;</mtext>
+    
   <mrow>
    <mrow>
     <mi>F5</mi>
@@ -33,6 +34,7 @@
   </mrow>
   <mo>&#8290;</mo>
   <mtext>&#62371;</mtext>
+  
   <mrow>
    <mrow>
     <mi>F10</mi>
@@ -48,6 +50,7 @@
   </mrow>
   <mo>&#8290;</mo>
   <mtext>&#62371;</mtext>
+  
   <mrow>
    <mi>Plot</mi>
    <mo>[</mo>
