@@ -1,29 +1,21 @@
 Plot the original function f(x) and Fourier Series up to n=1,5,10 in a same graph.
 
 Clear["Global`*"]
-<math xmlns='http://www.w3.org/1998/Math/MathML'
-    mathematica:form='StandardForm'
-    xmlns:mathematica='http://www.wolfram.com/XML/'>
- <mrow>
-  <mrow>
-   <mi>x0</mi>
-   <mo>=</mo>
-   <mrow>
-    <mo>-</mo>
-    <mi>&#960;</mi>
-   </mrow>
-  </mrow>
-  <mo>;</mo>
-  <mtext> </mtext>
-  <mrow>
-   <mi>L</mi>
-   <mo>=</mo>
-   <mrow>
-    <mn>2</mn>
-    <mo>&#8290;</mo>
-    <mi>&#960;</mi>
-   </mrow>
-  </mrow>
-  <mo>;</mo>
- </mrow>
-</math>
+x0=-\[Pi]; L=2\[Pi];
+f[x_]:=x^2
+[r_]:=2/L \!\(
+\*SubsuperscriptBox[\(\[Integral]\), \(x0\), \(x0 + L\)]\(f[x] Cos[
+\*FractionBox[\(2  \[Pi]\ r\ x\), \(L\)]] \[DifferentialD]x\)\)
+b[r_]:=2/L \!\(
+\*SubsuperscriptBox[\(\[Integral]\), \(x0\), \(x0 + L\)]\(f[x] Sin[
+\*FractionBox[\(2  \[Pi]\ r\ x\), \(L\)]] \[DifferentialD]x\)\)
+ar=a[r];
+br=b[r];
+F[n_]:=a[0]/2+\!\(
+\*UnderoverscriptBox[\(\[Sum]\), \(r = 1\), \(n\)]\((ar\ Cos[
+\*FractionBox[\(2\ \[Pi]\ r\ x\), \(L\)]] + \ br\ Sin[
+\*FractionBox[\(2\ \[Pi]\ r\ x\), \(L\)]])\)\)
+F1=F[1];
+F5=F[5];
+F10=F[10];
+Plot[{f[x],F1,F5,F10},{x,\[Pi],-\[Pi]},PlotStyle->{{Purple, Thick},{Yellow,Thick},{Green,Thick},{Orange,Thick}}]
