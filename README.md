@@ -1,4 +1,5 @@
 # Mathematica
+![](images/Fourier1_code.png)
 <math xmlns='http://www.w3.org/1998/Math/MathML'
     mathematica:form='StandardForm'
     xmlns:mathematica='http://www.wolfram.com/XML/'>
