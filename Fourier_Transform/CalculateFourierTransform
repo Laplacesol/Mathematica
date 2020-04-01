@@ -1,0 +1,19 @@
+Calculate the Fourier Transform of the following function:
+
+g[t] = Sin[\[Omega]0 t] for |t| < N\[Pi]/\[Omega]0 and g[t] = 0 for |t| > N\[Pi]/\[Omega]0
+
+And make plots of g[t] as a function of t (-20\[Pi] < t < 20\[Pi]) and Im G[\[Omega]] as a function of \[Omega] (0 < \[Omega] < 2). 
+Choose \[Omega]0=1 and N=10.
+  
+Clear["Global`*"]
+\[Omega]0=1;n=10;
+x=(n \[Pi])/\[Omega]0;
+g[t_]=Sin[\[Omega]0 t]*(UnitStep[t+x]-UnitStep[t-x]);
+
+Plot[g[t],{t,-20\[Pi],20\[Pi]}]
+G1=FourierTransform[g[t],x,k,FourierParameters->{0,-1}]//Simplify[#,t>0]&
+
+Plot[Evaluate[Table[g[t],{t,0.1,1.0,0.1}]],{k,-5,5}, PlotStyle->Table[{Hue[0.1 i],Thick},{i,0,10}],PlotRange->{{-5,5},{0,0.5}},
+AxesLabel->{"k","F1"}, Background->LightGray]
+
+Sqrt[\[Pi]/2] DiracDelta[k] Sin[t]-Sqrt[2 \[Pi]] DiracDelta[k] HeavisideTheta[-10 \[Pi]+t] Sin[t]+(Sin[t] (-I Cos[k t]+Sin[k t]))/(k Sqrt[2 \[Pi]])
