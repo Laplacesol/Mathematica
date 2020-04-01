@@ -147,4 +147,4 @@
   </mrow>
  </mrow>
 </math>
-
+![](images/Fourier1.jpg)
